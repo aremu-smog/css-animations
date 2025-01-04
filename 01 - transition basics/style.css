@@ -1,0 +1,43 @@
+button {
+	height: 96px;
+	width: 290px;
+	background-color: blue;
+	font-size: 28px;
+	color: white;
+	border: none;
+	transition-property: background-color color;
+	transition-duration: 3000ms;
+	transition-delay: 2000ms;
+}
+
+button:hover {
+	background-color: green;
+	color: black;
+}
+
+.move {
+	background-color: red;
+	transition-property: transform;
+	display: block;
+}
+
+.move:hover {
+	transform: translateX(500px);
+}
+
+#ease {
+	transition-timing-function: ease;
+}
+
+#linear {
+	transition-timing-function: linear;
+}
+#ease-in {
+	transition-timing-function: ease-in;
+}
+#ease-out {
+	transition-timing-function: ease-out;
+}
+#ease-in-out {
+	transition-timing-function: ease-in-out;
+}
