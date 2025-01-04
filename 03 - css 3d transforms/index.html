@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS 3D Transforms</title>
+
+		<style>
+			body {
+				perspective: 1000px;
+			}
+			img {
+				display: block;
+				width: 300px;
+				margin: auto;
+				transition: transform 2s;
+			}
+			img:hover {
+				/* transform: translateZ(300px); */
+				transform: rotateX(45deg);
+			}
+		</style>
+	</head>
+	<body>
+		<img src="./cat.jpeg" alt="Cat" />
+	</body>
+</html>
