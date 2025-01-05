@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Two Layers Swapping</title>
+		<style>
+			body {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			a {
+				font-size: 40px;
+				font-family: sans-serif;
+				text-decoration: none;
+				padding: 40px 80px;
+				border: 4px solid #262626;
+				position: relative;
+				transition: all 1s;
+				background-color: #262626;
+				color: transparent;
+				overflow: hidden;
+			}
+			a:before {
+				content: "Hover Me";
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #262626;
+				background-color: #fffa65;
+				width: 100%;
+				height: 100%;
+				transition: all 0.3s;
+			}
+			a:after {
+				content: "Hover Me";
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #262626;
+				background-color: #fffa65;
+				width: 100%;
+				height: 100%;
+				transform: translate(-100%, 100%);
+				transition: all 0.3s;
+			}
+			a:hover:before {
+				transform: translate(100%, -100%);
+			}
+			a:hover:after {
+				transform: translate(0%, 0%);
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">Hover me</a>
+	</body>
+</html>
