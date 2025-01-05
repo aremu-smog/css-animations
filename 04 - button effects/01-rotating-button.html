@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rotating Button</title>
+		<style>
+			body {
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			a {
+				text-decoration: none;
+				font-family: sans-serif;
+				font-size: 45px;
+				padding: 40px 80px;
+				border: 5px solid black;
+				color: black;
+				position: relative;
+				/* overflow: hidden; */
+				/* kindly remove overflow to hide element  */
+			}
+			a:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: yellow;
+				height: 100%;
+				width: 100%;
+				z-index: -1;
+				transform-origin: top right;
+				transform: rotate(90deg);
+				transition: transform 1s;
+			}
+			a:hover:before {
+				transform: rotate(0deg);
+			}
+		</style>
+	</head>
+	<body>
+		<a href="">Hover me</a>
+	</body>
+</html>
