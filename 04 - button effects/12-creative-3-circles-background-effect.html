@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>3 Circles Background</title>
+		<style>
+			body {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #222;
+			}
+			a {
+				font-size: 26px;
+				text-decoration: none;
+				font-family: sans-serif;
+				position: relative;
+				transition: all 0.3s 0.4s;
+				text-transform: uppercase;
+				background-color: transparent;
+				height: 80px;
+				width: 220px;
+				line-height:80px;
+				text-align:center;
+				color: yellow;
+			}
+			a:hover {
+				color: #222;
+			}
+			a:before,a:after {
+				position: absolute;
+				content: "";
+				transform: translateY(-50%);
+				top: 50%;
+				border-radius: 50%;
+				width: 20px;
+				height: 20px;
+				background-color: #fffa56;
+				opacity: 0;
+				transition: all 0.3s;
+				z-index: -1;
+			}
+			a:hover:before {
+				left: 50%;
+				opacity: 1;
+				box-shadow: 30px 0px 0px #fffa56;
+				transform: translateX(-50%) translateY(-50%);
+			}
+		
+			a:hover:after {
+				right: 50%;
+				opacity: 1;
+				box-shadow: -30px 0px 0px #fffa56;
+				transform: translateX(50%) translateY(-50%);
+			}
+			a:before {
+				left: 0;
+				box-shadow: -100px 0px 0px #fffa56;
+			}
+			a:after {
+				right: 0;
+				box-shadow: 100px 0px 0px #fffa56;
+			}
+			span {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background-color: #fffa56;
+				transform: scale(0);
+				z-index: -1;
+				transition: all 0.3s 0.4s;
+			}
+			a:hover span {
+				transform: scale(1);
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">
+		<span></span>
+			Hover me
+		</a>
+
+	</body>
+</html>
