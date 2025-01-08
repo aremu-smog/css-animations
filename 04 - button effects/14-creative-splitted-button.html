@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Template</title>
+		<style>
+			body {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #222;
+			}
+			a {
+				font-size: 25px;
+				color: yellow;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 40px 80px;
+				font-family: sans-serif;
+				border: 3px solid yellow;
+				position: relative;
+				transition: all 0.5s;
+				overflow: hidden;
+			}
+			a:hover{
+				color: grey;
+			}
+			a:before,a:after,span:before,span:after {
+				content: "";
+				position: absolute;
+				width: 25%;
+				background-color: yellow;
+				z-index: -1;
+				height: 100%;
+				background-color: #fffa56;
+				transition: all 0.5s;
+			}
+			a:hover:before{
+			top: 0;
+			left: 0;
+			}
+			a:before {
+				top:0;
+				left: -25%;
+			}
+			a:after {
+				top: -100%;
+				left: 25%;
+			}
+			a:hover:after {
+				top: 0;
+				left: 25%;
+			}
+			span:before {
+				top: 0;
+				right: -25%;
+			}
+			span:after {
+				bottom: -100%;
+				right: 25%;
+			}
+			a:hover span:before {
+				top: 0;
+				right: 0;
+			}
+			a:hover span:after {
+				bottom: 0;
+				right: 25%;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#"><span>hover me</span></a>
+	</body>
+</html>
