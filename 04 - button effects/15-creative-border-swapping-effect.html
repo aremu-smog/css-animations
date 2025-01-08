@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Template</title>
+		<style>
+			body {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #222;
+			}
+			a {
+				font-size: 22px;
+				text-decoration: none;
+				font-family: verdana;
+				height: 60px;
+				width: 200px;
+				line-height: 60px;
+				text-align: center;
+				position: relative;
+				transition: all 1s;
+				color: #fdc518;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
+			a:before {
+				position: absolute;
+				content: '';
+				left: 0;
+				top: -15px;
+				width: 200px;
+				height: 90px;
+				transition: all 1s
+				z-index: -1;
+				border-left: 2px solid red;
+				border-right: 2px solid #fdc518;
+				transition: all 0.5s;
+			}
+			a:after {
+				position: absolute;
+				content: '';
+				left: -15px;
+				top: 0;
+				width: 230px;
+				height: 60px;
+				z-index: -1;
+				border-top: 2px solid red;
+				border-bottom: 2px solid #fdc518;
+				transition: all 0.5s;
+			}
+			a:hover:after {
+				transform: rotateX(180deg);
+			}
+			a:hover:before {
+				transform: rotateY(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">hover me</a>
+	</body>
+</html>
